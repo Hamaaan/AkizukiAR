@@ -220,11 +220,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.arfoundation": {
-      "version": "4.2.3",
-      "depth": 1,
+      "version": "4.2.7",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.arsubsystems": "4.2.3",
+        "com.unity.xr.arsubsystems": "4.2.7",
         "com.unity.xr.management": "4.0.1",
         "com.unity.modules.particlesystem": "1.0.0"
       },
@@ -242,12 +242,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.arkit-face-tracking": {
-      "version": "4.2.3",
-      "depth": 1,
+      "version": "4.2.7",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.arkit": "4.2.3",
-        "com.unity.xr.arsubsystems": "4.2.3"
+        "com.unity.xr.arkit": "4.2.7",
+        "com.unity.xr.arsubsystems": "4.2.7"
       },
       "url": "https://packages.unity.com"
     },
