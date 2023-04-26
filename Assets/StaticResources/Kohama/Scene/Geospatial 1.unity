@@ -3022,8 +3022,8 @@ MonoBehaviour:
   Geospatial: {fileID: 384014291}
   ObjectPrefab: {fileID: 5831908950388203684, guid: a46bc1cf69cc345ba81f34525c7e1b09,
     type: 3}
-  Latitude: 33.56158593470691
-  Longitude: 130.4317281362403
+  Latitude: 33.56338581326081
+  Longitude: 130.43227441880504
   Altitude: 2.05
   EunRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &1752790627

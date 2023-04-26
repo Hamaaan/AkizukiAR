@@ -27,6 +27,7 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
             Geospatial = Geospatial.GetComponent<GeospatialController>();
             EarthManager = Geospatial.EarthManager;
 
+            AddAnchor();
         }
 
         // Update is called once per frame
