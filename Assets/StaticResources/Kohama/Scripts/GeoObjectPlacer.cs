@@ -16,10 +16,10 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
         ARAnchorManager AnchorManager;
         [SerializeField] GameObject ObjectPrefab;
 
-        [SerializeField] double Latitude;
-        [SerializeField] double Longitude;
-        [SerializeField] double Altitude;
-        [SerializeField] Quaternion EunRotation;
+        [SerializeField] double[] Latitude;
+        [SerializeField] double[] Longitude;
+        [SerializeField] double[] Altitude;
+        [SerializeField] Quaternion[] EunRotation;
 
         // Start is called before the first frame update
         void Start()
@@ -27,7 +27,7 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
             Geospatial = Geospatial.GetComponent<GeospatialController>();
             EarthManager = Geospatial.EarthManager;
 
-            AddAnchor();
+            
         }
 
         // Update is called once per frame
@@ -36,7 +36,15 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
 
         }
 
-        public void AddAnchor()
+        public void AnchorsPlaced()
+        {
+            for (int i = 0; i < Latitude.Length; i++)
+            {
+                AddAnchor(Latitude[i], Longitude[i], Altitude[i], EunRotation[i]);
+            }
+        }
+
+        public void AddAnchor(double Latitude, double Longitude, double Altitude, Quaternion EunRotation)
         {
             GeospatialAnchorHistory history = new GeospatialAnchorHistory(
                     Latitude, //Latitude
