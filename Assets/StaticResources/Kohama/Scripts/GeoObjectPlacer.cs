@@ -65,8 +65,8 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
                 eunRotation = Quaternion.AngleAxis(180f - (float)history.Heading, Vector3.up);
             }
 
-            var anchor = AnchorManager.AddAnchor(
-                    history.Latitude, history.Longitude, history.Altitude, eunRotation);
+            var anchor = AnchorManager.ResolveAnchorOnTerrain(
+                    history.Latitude, history.Longitude, 0, eunRotation);
             if (anchor != null)
             {
                 GameObject anchorGO = Instantiate(ObjectPrefab, anchor.transform);
