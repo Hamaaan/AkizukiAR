@@ -122,9 +122,15 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
 
                 GameObject anchorText = Instantiate(GeoPosDisplayerPrefab, anchor.transform);
                 GeoPosDisplay geoPos = anchorText.GetComponent<GeoPosDisplay>();
-                geoPos.DisplayText.text = Place_Name + "\n";
-                geoPos.DisplayText.text += "Latitude :" + history.Latitude.ToString() + "\n";
-                geoPos.DisplayText.text += "Longitude :" + history.Longitude.ToString();
+
+                geoPos.placename = Place_Name + "\n";
+                geoPos.lat = history.Latitude.ToString() + "\n";
+                geoPos.lon = history.Longitude.ToString();
+
+                LonLatToAddr toAddr = anchorText.GetComponent<LonLatToAddr>();
+                toAddr.latitude = (float)history.Latitude;
+                toAddr.longitude = (float)history.Longitude;
+                StartCoroutine(toAddr.GetAddressFromLatLong());
 
             }
             else

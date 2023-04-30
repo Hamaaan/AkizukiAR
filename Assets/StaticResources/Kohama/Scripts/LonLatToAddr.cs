@@ -6,8 +6,8 @@ using System.Xml;
 public class LonLatToAddr : MonoBehaviour
 {
     [SerializeField] private string appid; // Yahoo! JapanのAPIキー
-    [SerializeField] private float latitude; // 緯度
-    [SerializeField] private float longitude; // 経度
+    public float latitude; // 緯度
+    public float longitude; // 経度
     [SerializeField] string GeoPos;
 
     private const string ApiBaseUrl = "https://map.yahooapis.jp/geoapi/V1/reverseGeoCoder?lat={0}&lon={1}&appid={2}";
@@ -18,8 +18,10 @@ public class LonLatToAddr : MonoBehaviour
     public string Address { get; private set; }
     private void Start()
     {
+        /*
         GeoPosConvertFloat();
         StartCoroutine("GetAddressFromLatLong");
+        */
     }
 
     void GeoPosConvertFloat()

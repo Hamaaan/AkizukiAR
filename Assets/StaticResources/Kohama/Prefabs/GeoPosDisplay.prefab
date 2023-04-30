@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5645656345829060341}
   - component: {fileID: 5645656345829060340}
   - component: {fileID: 3541375514806900756}
+  - component: {fileID: 2286685496733215503}
   m_Layer: 0
   m_Name: GeoPosDisplay
   m_TagString: Untagged
@@ -111,7 +112,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4011794af4c974ef1a4d71c7e81cf55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisplayText: {fileID: 0}
+  DisplayText: {fileID: 5645656346040971400}
+  LonLatToAddr: {fileID: 2286685496733215503}
+  placename: 
+  lat: 
+  lon: 
+  address: 
+--- !u!114 &2286685496733215503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645656345829060339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf74be1581e94dfab60880fd956d68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appid: dj00aiZpPThFT25vaGx5RjM0MiZzPWNvbnN1bWVyc2VjcmV0Jng9NTU-
+  latitude: 0
+  longitude: 0
+  GeoPos: 
 --- !u!1 &5645656346040971397
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,30 +10,38 @@ using TMPro;
 public class GeoPosDisplay : MonoBehaviour
 {
     public TextMeshPro DisplayText;
+    public LonLatToAddr LonLatToAddr;
+
+    public string placename;
+    public string lat;
+    public string lon;
+    public string address;
 
     // Start is called before the first frame update
     void Start()
     {
-
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        SetText();
     }
 
     private void OnEnable()
     {
         DisplayText = GetComponentInChildren<TextMeshPro>();
-
-        DisplayText.text = "Latitude :" + "null" + "\n";
-        DisplayText.text += "Longitude :" + "null";
+        LonLatToAddr = LonLatToAddr.GetComponent<LonLatToAddr>();
     }
 
-    public void SetText(string t)
+    public void SetText()
     {
-        DisplayText.text = t;
+        DisplayText.text = placename + "\n";
+        DisplayText.text += lat + "\n";
+        DisplayText.text += lon + "\n";
+        address = LonLatToAddr.Address;
+        DisplayText.text += address + "\n";
+        Debug.Log(address);
     }
 }
