@@ -452,8 +452,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   appid: dj00aiZpPThFT25vaGx5RjM0MiZzPWNvbnN1bWVyc2VjcmV0Jng9NTU-
-  longitude: 139.7746
-  latitude: 35.68382
+  latitude: 0
+  longitude: 0
+  GeoPos: 33.58710677968438, 130.37806329427835
 --- !u!114 &840465711
 MonoBehaviour:
   m_ObjectHideFlags: 0
