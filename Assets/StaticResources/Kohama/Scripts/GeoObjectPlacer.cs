@@ -21,6 +21,8 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
         [SerializeField] double[] Altitude;
         [SerializeField] Quaternion[] EunRotation;
 
+        [SerializeField] GameObject GeoPosDisplayerPrefab;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -40,7 +42,8 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
         {
             for (int i = 0; i < Latitude.Length; i++)
             {
-                AddAnchor(Latitude[i], Longitude[i], Altitude[i], EunRotation[i]);
+                AddAnchor(Latitude[i], Longitude[i], 0, new Quaternion(0, 0, 0, 0));
+                //  緯度と経度だけ入力
             }
         }
 
