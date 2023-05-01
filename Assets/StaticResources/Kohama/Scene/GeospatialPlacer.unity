@@ -2700,9 +2700,9 @@ MonoBehaviour:
   RaycastManager: {fileID: 691323913}
   EarthManager: {fileID: 691323912}
   ARCoreExtensions: {fileID: 1476232295}
-  GeospatialPrefab: {fileID: 5831908950388203684, guid: f09a13e3d47394ab588884ffd124d732,
+  GeospatialPrefab: {fileID: 4526480855566711178, guid: d72377cee0e6a4248979e589944cc4b5,
     type: 3}
-  TerrainPrefab: {fileID: 5831908950388203684, guid: a46bc1cf69cc345ba81f34525c7e1b09,
+  TerrainPrefab: {fileID: 4526480855566711178, guid: d72377cee0e6a4248979e589944cc4b5,
     type: 3}
   PrivacyPromptCanvas: {fileID: 782365343}
   VPSCheckCanvas: {fileID: 61745207}
