@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
-    [Header("GPSの座標における上下左右の値")]
+    [Header("GPS?????W???????????????E???l")]
     [SerializeField] double top;
     [SerializeField] double bottom;
     [SerializeField] double left;
@@ -21,11 +21,11 @@ public class MapManager : MonoBehaviour
     [SerializeField] Image Map;
     [SerializeField] Image Cursor;
 
-    [Header("現在のGPS座標(public)")]
+    [Header("??????GPS???W(public)")]
     public double currentLatitude;
     public double currentLongitude;
 
-    [Header("UI上のカーソルの座標")]
+    [Header("UI?????J?[????????W")]
     [SerializeField] float map_x;
     [SerializeField] float map_y;
 
@@ -33,7 +33,7 @@ public class MapManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // GPS 初期化
+        // GPS ??????
         Input.location.Start();
         Input.compass.enabled = true;
 
@@ -49,8 +49,8 @@ public class MapManager : MonoBehaviour
         {
             LocationInfo locationInfo = new LocationInfo();
             locationInfo = Input.location.lastData;
-            currentLatitude = locationInfo.latitude; //緯度
-            currentLongitude = locationInfo.longitude; //経度
+            currentLatitude = locationInfo.latitude; //???x
+            currentLongitude = locationInfo.longitude; //?o?x
         }
 
         MappingCalculation(currentLongitude, currentLatitude);
@@ -58,10 +58,10 @@ public class MapManager : MonoBehaviour
 
     void MappingCalculation(double x, double y)
     {
-        double dx = right - x; //東向きに＋
+        double dx = right - x; //?????????{
         width = right - left;
         double wx = dx / width;
-        //左からどれだけズレているかをパーセントで表示
+        //???????????????Y?????????????p?[?Z???g???\??
 
         map_x = Map.rectTransform.rect.xMax - (float)(wx * Map.rectTransform.rect.width);
 
