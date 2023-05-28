@@ -12,11 +12,17 @@ public class MokkunAnimManager : MonoBehaviour
 
     [SerializeField] bool RandomWalk = false;
 
+    [SerializeField] GameObject Kuroda;
+    [SerializeField] GameObject TextBox2;
+    bool FlagEscape = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
         prePos = this.transform.position;
+        IsIdle();
         if (RandomWalk)
         {
             StartCoroutine("PositionUpdate");
@@ -38,6 +44,21 @@ public class MokkunAnimManager : MonoBehaviour
         }
 
         prePos = this.transform.position;
+
+        if (Kuroda == null)
+        {
+            IsDepree();
+            if (!FlagEscape)
+            {
+                if (!TextBox2.activeSelf)
+                {
+                    Escape();
+                    FlagEscape = true;
+                }
+            }
+        }
+        
+        
     }
 
     List<Vector3> vector3s = new List<Vector3>();
@@ -65,5 +86,16 @@ public class MokkunAnimManager : MonoBehaviour
     public void IsIdle()
     {
         _animator.SetFloat("IdleState", 0);
+    }
+
+    public void IsDepree()
+    {
+        _animator.SetFloat("IdleState", 1);
+    }
+
+    public void Escape()
+    {
+        transform.DOMoveX(10, 4).SetRelative();
+        _animator.SetTrigger("Exit");
     }
 }

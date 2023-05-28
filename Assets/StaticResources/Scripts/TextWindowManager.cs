@@ -32,6 +32,8 @@ public class TextWindowManager : MonoBehaviour
 
     [SerializeField] Color[] NameColor;
 
+    [SerializeField] GameObject MessageReceiver;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,12 +66,22 @@ public class TextWindowManager : MonoBehaviour
     public void Trigger()
     {
         StartCoroutine(TextUpdate());
+        
+
         if (TextMessage[TextIndex].Contains('{'))
         {
             if (TextMessage[TextIndex].Contains('}'))
             {
                 //ínÇÃï∂
                 TextName.gameObject.transform.parent.gameObject.SetActive(false);
+            }
+            else if(TextMessage[TextIndex].Contains('/'))
+            {
+                //messageëóêM
+                string message = TextMessage[TextIndex].Substring(2);
+                Debug.Log(message);
+
+                MessageReceiver.SendMessage(message);
             }
             else
             {
@@ -97,7 +109,6 @@ public class TextWindowManager : MonoBehaviour
                 }
                 source.PlayOneShot(ScriptAudio[AudioIndex]);
             }
-            Debug.Log("audio:" + AudioIndex);
             AudioIndex++;
         }
 
