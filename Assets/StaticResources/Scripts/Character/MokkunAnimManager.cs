@@ -10,12 +10,17 @@ public class MokkunAnimManager : MonoBehaviour
     Animator _animator;
     Vector3 prePos;
 
+    [SerializeField] bool RandomWalk = false;
+
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
         prePos = this.transform.position;
-        StartCoroutine("PositionUpdate");
+        if (RandomWalk)
+        {
+            StartCoroutine("PositionUpdate");
+        }
     }
 
 
