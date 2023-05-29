@@ -97,16 +97,18 @@ public class TextWindowManager : MonoBehaviour
             TextIndex++;
         }
 
+
+        //ë‰éåâπê∫ÇÃçƒê∂
+        AudioSource source = GetComponent<AudioSource>();
+        if (source.isPlaying)
+        {
+            source.Stop();
+        }
         if (AudioIndex < ScriptAudio.Length)
         {
             if (ScriptAudio[AudioIndex] != null)
             {
-                //ë‰éåâπê∫ÇÃçƒê∂
-                AudioSource source = GetComponent<AudioSource>();
-                if (source.isPlaying)
-                {
-                    source.Stop();
-                }
+                
                 source.PlayOneShot(ScriptAudio[AudioIndex]);
             }
             AudioIndex++;
