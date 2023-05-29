@@ -95,8 +95,8 @@ public class MokkunAnimManager : MonoBehaviour
 
     public void Escape()
     {
-        transform.DOMoveX(10, 4).SetRelative();
+        transform.DOMoveX(10, 5).SetRelative();
         _animator.SetTrigger("Exit");
-        Destroy(this.gameObject, 2f);
+        Destroy(this.gameObject, 2.5f);
     }
 }
