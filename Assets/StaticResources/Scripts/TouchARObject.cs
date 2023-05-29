@@ -26,7 +26,10 @@ public class TouchARObject : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                hit.collider.gameObject.SendMessage("GetTouch");
+                if (hit.collider.tag == "ARObjects")
+                {
+                    hit.collider.gameObject.SendMessage("GetTouch");
+                }
             }
 
             if (raycastManager.Raycast(Input.GetTouch(0).position, hitResults, TrackableType.AllTypes))
