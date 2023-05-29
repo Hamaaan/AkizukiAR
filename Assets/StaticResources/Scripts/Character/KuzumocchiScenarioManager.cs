@@ -26,7 +26,7 @@ public class KuzumocchiScenarioManager : MonoBehaviour
 
     public void GetTouch()
     {
-        if (!Mokkun.activeSelf)
+        if (!Mokkun)
         {
             if (!Flag3)
             {

@@ -97,5 +97,6 @@ public class MokkunAnimManager : MonoBehaviour
     {
         transform.DOMoveX(10, 4).SetRelative();
         _animator.SetTrigger("Exit");
+        Destroy(this.gameObject, 2f);
     }
 }
