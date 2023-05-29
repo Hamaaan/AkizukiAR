@@ -9,18 +9,21 @@ EditorBuildSettings:
     path: Assets/ARFoundation4.2.7/Scenes/ARFoundationMenu/Menu.unity
     guid: 904110ab8cef14f7d96c56ca20774e5a
   - enabled: 1
+    path: Assets/StaticResources/Scenes/GeospatialPlacer 1.unity
+    guid: 4d76b4e10acb0504aa7edd9915d45f14
+  - enabled: 0
     path: Assets/StaticResources/Scenes/AppScene/Titile.unity
     guid: 5413b6176dd15ac468c9b5a0df13819b
-  - enabled: 1
+  - enabled: 0
     path: Assets/StaticResources/Scenes/AppScene/MapMode.unity
     guid: c53c779e506cba442be67c433974698a
-  - enabled: 1
+  - enabled: 0
     path: Assets/StaticResources/Scenes/AppScene/Home.unity
     guid: 8da4867707763cd4eae81553d86d678e
-  - enabled: 1
+  - enabled: 0
     path: Assets/StaticResources/Scenes/GeospatialPlacer.unity
     guid: 3eccc3c491abd42f7b7d68184ad79fbb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Mobile Console/Assets/LogConsole.unity
     guid: 6d2ee6336ff704f55b20f3b62801afd5
   m_configObjects:

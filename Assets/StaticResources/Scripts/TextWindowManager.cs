@@ -10,12 +10,12 @@ public class TextWindowManager : MonoBehaviour
     [SerializeField] Text TextName;
     [SerializeField] Text TextBox;
 
-    [Header("表示中のテキスト")]
-    public float delay = 0.1f; // 1文字表示するのにかかる秒数
+    //[Header("?\???????e?L?X?g")]
+    public float delay = 0.1f; // 1?????\?????????????????b??
     public string fullText;
     private string currentText = "";
 
-    [Header("テキスト")]
+    [Header("?e?L?X?g")]
     [TextArea(3,20)]
     [SerializeField] string AllText;
 
@@ -48,10 +48,10 @@ public class TextWindowManager : MonoBehaviour
     {
         UpdateButton.interactable = false;
 
-        //名前
+        //???O
 
 
-        //本文
+        //?{??
         for (int i = 0; i <= fullText.Length; i++)
         {
             currentText = fullText.Substring(0, i);
@@ -72,12 +72,12 @@ public class TextWindowManager : MonoBehaviour
         {
             if (TextMessage[TextIndex].Contains('}'))
             {
-                //地の文
+                //?n????
                 TextName.gameObject.transform.parent.gameObject.SetActive(false);
             }
             else if(TextMessage[TextIndex].Contains('/'))
             {
-                //message送信
+                //message???M
                 string message = TextMessage[TextIndex].Substring(2);
                 Debug.Log(message);
 
@@ -85,7 +85,7 @@ public class TextWindowManager : MonoBehaviour
             }
             else
             {
-                //名前の変更
+                //???O?????X
                 TextName.gameObject.transform.parent.gameObject.SetActive(true);
                 TextName.text = TextMessage[TextIndex].Substring(2);
 
@@ -98,7 +98,7 @@ public class TextWindowManager : MonoBehaviour
         }
 
 
-        //台詞音声の再生
+        //??????????????
         AudioSource source = GetComponent<AudioSource>();
         if (source.isPlaying)
         {
@@ -118,7 +118,7 @@ public class TextWindowManager : MonoBehaviour
         TextIndex++;
         if (TextIndex >= TextMessage.Length)
         {
-            //ウィンドウ終了処理
+            //?E?B???h?E?I??????
             TextEnd();
         }
     }
